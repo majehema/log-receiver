@@ -1,0 +1,12 @@
+syntax = "proto3";
+package logSaver;
+
+message Log {
+  int64 tstamp = 1;
+  int64 userId = 2;
+  string event = 3;
+}
+
+message Report {
+  repeated Log logs = 1;
+}

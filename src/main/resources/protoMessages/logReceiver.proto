@@ -1,0 +1,14 @@
+syntax = "proto3";
+package logReceiver;
+option java_package = "com.konux.logReceiver.proto";
+option java_outer_classname = "LogProto";
+
+message Log {
+  int64 tstamp = 1;
+  int64 userId = 2;
+  string event = 3;
+}
+
+message Report {
+  repeated Log logs = 1;
+}
